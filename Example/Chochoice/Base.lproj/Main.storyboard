@@ -1,30 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l5C-4P-t3k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Fav Beverage View Controller-->
+        <scene sceneID="sDv-y7-56c">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Chochoice_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <viewController storyboardIdentifier="FavouriteBeverages" id="l5C-4P-t3k" customClass="FavBeverageViewController" customModule="Chochoice_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cYQ-2E-ntA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your favourite beverages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrq-Ds-Ynb">
+                                <rect key="frame" x="16" y="80" width="238" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aK-cH-uAS" userLabel="Beverages">
+                                <rect key="frame" x="16" y="138" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMt-ba-LWA">
+                                <rect key="frame" x="176.5" y="167" width="30" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="pressEditButton:" destination="l5C-4P-t3k" eventType="touchUpInside" id="ieR-nd-Dyf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jrq-Ds-Ynb" firstAttribute="leading" secondItem="qML-UQ-nn4" secondAttribute="leading" constant="16" id="6RL-yh-NOz"/>
+                            <constraint firstItem="8aK-cH-uAS" firstAttribute="top" secondItem="jrq-Ds-Ynb" secondAttribute="bottom" constant="32" id="Hok-5o-pK0"/>
+                            <constraint firstItem="8aK-cH-uAS" firstAttribute="leading" secondItem="qML-UQ-nn4" secondAttribute="leading" constant="16" id="M19-Oo-Neb"/>
+                            <constraint firstItem="fMt-ba-LWA" firstAttribute="centerX" secondItem="8aK-cH-uAS" secondAttribute="centerX" id="MNr-xp-bdb"/>
+                            <constraint firstItem="jrq-Ds-Ynb" firstAttribute="top" secondItem="qML-UQ-nn4" secondAttribute="top" constant="60" id="haj-jK-Mv5"/>
+                            <constraint firstItem="fMt-ba-LWA" firstAttribute="top" secondItem="8aK-cH-uAS" secondAttribute="bottom" constant="8" id="odc-a8-GC6"/>
+                            <constraint firstItem="qML-UQ-nn4" firstAttribute="trailing" secondItem="8aK-cH-uAS" secondAttribute="trailing" constant="8" id="suh-CW-Gop"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qML-UQ-nn4"/>
                     </view>
+                    <connections>
+                        <outlet property="beveragesLabel" destination="8aK-cH-uAS" id="X0P-E3-pCy"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O16-fc-yml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-835" y="127"/>
         </scene>
     </scenes>
 </document>

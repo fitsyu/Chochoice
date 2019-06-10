@@ -1,0 +1,27 @@
+PODS:
+  - Chochoice (0.1.0)
+  - Nimble (8.0.1)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - Chochoice (from `../`)
+  - Nimble
+  - Quick
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  Chochoice:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Chochoice: f541edd48ae3b44407995000985ad48b74acc0f4
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: a3435a16b44ec7c0ae662be5616e6a4d74fd8ce0
+
+COCOAPODS: 1.7.1

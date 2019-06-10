@@ -1,0 +1,6 @@
+framework module Pods_Chochoice_Tests {
+  umbrella header "Pods-Chochoice_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
