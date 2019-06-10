@@ -21,7 +21,7 @@
   "source_files": "Chochoice/Classes/**/*",
   "resource_bundles": {
     "Chochoice": [
-      "Chochoice/Asset/*.storyboard"
+      "Chochoice/**/*.storyboard"
     ]
   }
 }

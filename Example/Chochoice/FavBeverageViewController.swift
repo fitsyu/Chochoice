@@ -40,7 +40,7 @@ final class FavBeverageViewController: UIViewController {
         
         
         // create its presenter
-        let avc: DefaultMultipleChoicePresenter =  DefaultMultipleChoicePresenter() //DefaultMultipleChoicePresenter.load()
+        let avc: DefaultMultipleChoicePresenter =  DefaultMultipleChoicePresenter.load()
         
         var presenter: MultipleChoicePresenter = avc
         

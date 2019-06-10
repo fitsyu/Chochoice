@@ -13,7 +13,7 @@
         <!--Default Multiple Choice Presenter-->
         <scene sceneID="2rm-jr-Yjc">
             <objects>
-                <viewController storyboardIdentifier="MultipleChoiceViewController" id="cog-Wc-rJa" customClass="DefaultMultipleChoicePresenter" customModule="Chochoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DefaultMultipleChoicePresenter" id="cog-Wc-rJa" customClass="DefaultMultipleChoicePresenter" customModule="Chochoice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57I-kE-ItW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

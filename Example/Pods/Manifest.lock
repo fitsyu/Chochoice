@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Chochoice: f541edd48ae3b44407995000985ad48b74acc0f4
+  Chochoice: 396d3c063d50076fa104182fb0854ba17c88826f
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 

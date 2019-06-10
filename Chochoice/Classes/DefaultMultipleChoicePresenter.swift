@@ -12,16 +12,6 @@ import UIKit
 public class DefaultMultipleChoicePresenter: UIViewController, MultipleChoicePresenter {
 
     
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        dump(nibBundleOrNil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     public var delegate: MultipleChoicePresenterDelegate?
     
     public var backingStore: MultipleChoice<String> = MultipleChoice<String>.init()
@@ -149,7 +139,7 @@ extension DefaultMultipleChoicePresenter {
     
     public static func load() -> DefaultMultipleChoicePresenter {
         
-        let podBndl = Bundle(for: DefaultMultipleChoicePresenter.classForCoder())
+        let podBndl = Bundle(for: DefaultMultipleChoicePresenter.self)
         
         let url = podBndl.url(forResource: "Chochoice", withExtension: "bundle")!
         
@@ -158,8 +148,8 @@ extension DefaultMultipleChoicePresenter {
         let _self = UIStoryboard(name: "Chochoice", bundle: bundle)
             .instantiateInitialViewController() as! DefaultMultipleChoicePresenter
         
-        
-        
         return _self
+
+      
     }
 }
