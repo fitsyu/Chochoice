@@ -10,6 +10,7 @@ import UIKit
 import Chochoice
 
 // this is the example driving code
+// demonstrating how to use this little pod
 
 final class FavBeverageViewController: UIViewController {
     
@@ -18,18 +19,20 @@ final class FavBeverageViewController: UIViewController {
     
     var beverages: [String] = [] {
         didSet {
-            if beverages.isEmpty {
-                beveragesLabel.text = "None"
-            } else {
-                let text = beverages.joined(separator: ", ")
-                beveragesLabel.text = text
+            
+            var text = "None"
+            if !beverages.isEmpty {
+                text = beverages.joined(separator: ", ")
             }
+            
+            beveragesLabel.text = text
         }
     }
     
+    
     var choices: [(String,Bool)] = [
         ("Capucino", false),
-        ("Latte", false),
+        ("Latte",    false),
         ("Espresso", false)
     ]
     
@@ -37,7 +40,6 @@ final class FavBeverageViewController: UIViewController {
         
         // create list of choices
         let multipleChoice = try! MultipleChoice<String>(prefilledChoices: choices)
-        
         
         // create its presenter
         let avc: DefaultMultipleChoicePresenter =  DefaultMultipleChoicePresenter.load()
